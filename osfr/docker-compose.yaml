@@ -1,0 +1,32 @@
+services:
+  humble-ros:
+    build:
+      context: ../
+      dockerfile: osfr/Dockerfile
+    container_name: humble-ros
+    runtime: nvidia
+    ports:
+      - "8000:5000"
+      - "8554:8554"
+      - "50007:50007"
+    devices:
+      - /dev/video0:/dev/video0
+      # - /dev/video2:/dev/video2
+      #- /dev/video4:/dev/video4
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - DISPLAY=$DISPLAY
+    volumes:
+      - type: bind
+        source: ../src
+        # target: /opt/nvidia/deepstream/deepstream-6.2/sources/deepstream_python_apps/apps/custom_deepstream_yolov8_rtsp/app
+     # - type: bind
+     #   source: test-video
+     #   target: /opt/nvidia/deepstream/deepstream-6.2/sources/deepstream_python_apps/apps/custom_deepstream_yolov8_rtsp/test-video
+      - /tmp/.X11-unix:/tmp/.X11-unix
