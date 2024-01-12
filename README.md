@@ -17,3 +17,9 @@ The Docker container is running with nvidia gpu capabilities, if the system does
 
 Installing gazebo:
 https://classic.gazebosim.org/tutorials?tut=ros2_installing&cat=connect_ros
+
+To build project3:
+open terminal and direct towards ros_workspace/src
+Then colcon build --symlink-install
+
+To run the urdf in the gazebo run:
