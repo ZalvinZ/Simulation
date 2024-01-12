@@ -29,6 +29,6 @@ To run the urdf in the gazebo run:
 Run:
 ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False
 This will launch the nav2 basic simulation wiht gazebo. 
-Then run the python file called simple_api.py
+Then run the python file called waypoint_nav.py
 
 
