@@ -17,9 +17,17 @@ The Docker container is running with nvidia gpu capabilities, if the system does
 
 Installing gazebo:
 https://classic.gazebosim.org/tutorials?tut=ros2_installing&cat=connect_ros
-
-To build project3:
+# simple_api.py
+When the script is run, it allows the user to input the amount of waypoints along with each coordinates in x,y. In addittion if the user presses the 's' key, the robot stops as an emergency stop.
+# To build project3:
 open terminal and direct towards ros_workspace/src
 Then colcon build --symlink-install
 
 To run the urdf in the gazebo run:
+
+To demonstrate knowledge of waypoint navigaation with capabiility of stopping the robot anytime:
+Run:
+ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False
+This will launch the nav2 basic simulation wiht gazebo. 
+Then run the python file called simple_api.py
+
