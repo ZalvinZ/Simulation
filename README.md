@@ -23,8 +23,6 @@ When the script is run, it allows the user to input the amount of waypoints alon
 open terminal and direct towards ros_workspace/src
 Then colcon build --symlink-install
 
-To run the urdf in the gazebo run:
-
 # To demonstrate knowledge of waypoint navigaation with capabiility of stopping the robot anytime:
 Run:
 ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False
