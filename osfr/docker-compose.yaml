@@ -2,7 +2,7 @@ services:
   humble-ros:
     build:
       context: ../
-      dockerfile: osfr/Dockerfile
+      dockerfile: Dockerfile_file/Dockerfile
     container_name: humble-ros
     runtime: nvidia
     ports:
